@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+string Invertir(string);
+
+int main() {
+    string palabra;
+    cout << "Ingrese palabra: ";
+    getline(cin, palabra);
+
+    cout << Invertir(palabra) << endl;
+    return 0;
+}
+
+string Invertir(string s) {
+    reverse(s.begin(), s.end());
+    return s;
+}
