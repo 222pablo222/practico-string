@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+string QuitarVocales(string);
+
+int main() {
+    string texto;
+    cout << "Ingrese texto: ";
+    getline(cin, texto);
+
+    cout << QuitarVocales(texto) << endl;
+    return 0;
+}
+
+string QuitarVocales(string s) {
+    string r = "";
+    string vocales = "aeiouAEIOU";
+
+    for (char c : s)
+        if (vocales.find(c) == string::npos)
+            r += c;
+
+    return r;
+}
