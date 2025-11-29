@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+string BorrarCaracter(string, char);
+
+int main() {
+    string texto;
+    char c;
+    cout << "Texto: ";
+    getline(cin, texto);
+    cout << "Que caracter borrar?: ";
+    cin >> c;
+
+    cout << BorrarCaracter(texto, c) << endl;
+    return 0;
+}
+string BorrarCaracter(string s, char c) {
+    string r = "";
+    for (char x : s)
+        if (x != c)
+            r += x;
+    return r;
+}
