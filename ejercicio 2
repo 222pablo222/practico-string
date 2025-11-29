@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int ContarPalabras(string);
+
+int main() {
+    string texto;
+    cout << "Ingrese texto: ";
+    getline(cin, texto);
+
+    cout << ContarPalabras(texto) << " palabras" << endl;
+    return 0;
+}
+
+int ContarPalabras(string s) {
+    int cont = 0;
+    bool enPalabra = false;
+
+    for (char c : s) {
+        if (c != ' ' && !enPalabra) {
+            enPalabra = true;
+            cont++;
+        } else if (c == ' ') {
+            enPalabra = false;
+        }
+    }
+    return cont;
+}
