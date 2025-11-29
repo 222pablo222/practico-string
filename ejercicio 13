@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int BuscarSubCadena(string, string);
+
+int main() {
+    string cad, sub;
+    cout << "Cadena: ";
+    getline(cin, cad);
+    cout << "Subcadena: ";
+    getline(cin, sub);
+
+    cout << BuscarSubCadena(sub, cad) << endl;
+    return 0;
+}
+
+int BuscarSubCadena(string sub, string cad) {
+    int pos = cad.find(sub);
+    return (pos != string::npos) ? pos : -1;
+}
