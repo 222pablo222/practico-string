@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+string Capitalizar(string);
+
+int main() {
+    string texto;
+    cout << "Ingrese texto: ";
+    getline(cin, texto);
+
+    cout << Capitalizar(texto) << endl;
+    return 0;
+}
+
+string Capitalizar(string s) {
+    bool nuevaPalabra = true;
+
+    for (int i = 0; i < s.size(); i++) {
+        if (s[i] == ' ')
+            nuevaPalabra = true;
+        else {
+            if (nuevaPalabra)
+                s[i] = toupper(s[i]);
+            nuevaPalabra = false;
+        }
+    }
+    return s;
+}
