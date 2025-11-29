@@ -1,0 +1,26 @@
+#include <iostream>
+#include <vector>
+#include <set>
+using namespace std;
+
+set<char> Interseccion(set<char>, set<char>);
+
+int main() {
+    set<char> A = {'k','b','c','a','I','t','e','q','p'};
+    set<char> B = {'a','m','g','p','I','h','k','n'};
+
+    set<char> C = Interseccion(A, B);
+
+    cout << "C = { ";
+    for (char c : C) cout << c << " ";
+    cout << "}" << endl;
+
+    return 0;
+}
+
+set<char> Interseccion(set<char> A, set<char> B) {
+    set<char> C;
+    for (char c : A)
+        if (B.count(c)) C.insert(c);
+    return C;
+}
