@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+string Ordenar(string);
+
+int main() {
+    string texto;
+    cout << "Ingrese texto: ";
+    getline(cin, texto);
+
+    cout << Ordenar(texto) << endl;
+    return 0;
+}
+
+string Ordenar(string s) {
+    sort(s.begin(), s.end());
+    return s;
+}
