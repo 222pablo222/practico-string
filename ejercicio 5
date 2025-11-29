@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+string Mezclar(string, string);
+
+int main() {
+    string a, b;
+    cout << "Cadena 1: ";
+    getline(cin, a);
+    cout << "Cadena 2: ";
+    getline(cin, b);
+
+    cout << Mezclar(a, b) << endl;
+    return 0;
+}
+
+string Mezclar(string a, string b) {
+    return a + b;
+}
