@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+bool EsPalindromo(string);
+
+int main() {
+    string texto;
+    cout << "Ingrese texto: ";
+    getline(cin, texto);
+
+    cout << (EsPalindromo(texto) ? "true" : "false") << endl;
+    return 0;
+}
+
+bool EsPalindromo(string s) {
+    string r = s;
+    reverse(r.begin(), r.end());
+    return r == s;
+}
